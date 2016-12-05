@@ -1,0 +1,24 @@
+html
+    head
+        link(rel="stylesheet" type ="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css")
+
+    body
+        .container
+            nav.navbar.navbar-inverse.navbar-embossed
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand(href="#") Cool logo
+                    .collapse.navbar-collapse
+                        ul.nav.navbar-nav.navbar-right
+                            li
+                                a(href="/friends") Buscar a mis amigos
+                            li
+                                a(href="/auth/close") Cerrar sesión
+            section
+                h1 Awesome profiles
+                P Logros description
+                .row
+                    .col-xs-6(style="float:none;")
+                        form(action="/logros" method="POST")
+                            input(type="text" class="form-control" placeholder="¿Qué impresionante logro quieres compartir?" name="logro")
+                            input(type="submit" value="Compartir logro" class="btn btn-info" style="margin-top:20px;")
